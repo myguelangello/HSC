@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>São Camilo Fortaleza</title>
+</head>
+<style>
+  :root {
+    --cor-primaria: #f4f4f5;
+    --cor-hover: #bfdbfe;
+
+    --tamanho-fonte: 16px;
+    font-size: 16px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  body {
+    display: flex;
+    flex: 1 1 0%;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", sans-serif;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--cor-primaria);
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #3f3f46;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #71717a;
+  }
+
+  .container {
+    display: grid;
+    grid-auto-columns: max-content;
+    gap: 1rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    height: 13rem;
+    width: 11rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    background-color: #fafafa;
+    transition-property: background-color, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    border: 1px #e4e4e7 solid;
+    box-shadow: 0 1px 2px 0 #e4e4e7;
+  }
+
+  .card:hover {
+    background-color: #e2e8f0;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  img {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+
+  span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #3f3f46;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      grid-auto-flow: column;
+    }
+
+    .card {
+      height: 13rem;
+      width: 11rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      grid-auto-flow: column;
+    }
+
+    .card {
+      height: 13rem;
+      width: 11rem;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      height: 13rem;
+      width: 11rem;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      height: 10rem;
+      width: 8rem;
+    }
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    main {
+      --tw-bg-opacity: 1;
+      background-color: #18181b;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    p {
+      color: #a1a1aa;
+    }
+
+    span {
+      color: #f4f4f5;
+    }
+
+    .card {
+      background-color: #27272a;
+      border-color: #3f3f46;
+      box-shadow: 0 1px 2px 0 #3f3f46;
+      transition-property: background-color, opacity;
+      transition-timing-function: ease;
+      transition-duration: 0.5s;
+    }
+
+    .card:hover {
+      background-color: #475569;
+      opacity: 0.8;
+      cursor: pointer;
+      transition-property: opacity;
+    }
+  }
+</style>
+
+<body>
+  <main>
+    <div class="header">
+      <h1>O que você está procurando?</h1>
+      <p>
+        Aqui você pode ter um acesso rápido aos sistemas mais usados.
+      </p>
+    </div>
+
+    <div>
+      <div class="container"> <!-- Card -->
+        <a href="https://google.com" target="_blank">
+          <div class="card">
+            <img src="./google.png" alt="Acesso 1" width="100" height="100" />
+            <span>Acesso 1</span>
+          </div>
+        </a>
+
+        <a href="https://instagram.com" target="_blank">
+          <div class="card">
+            <img src="./instagram.svg" alt="Acesso 4" width="100" height="100" />
+            <span>Acesso 2</span>
+          </div>
+        </a>
+        <a href="https://web.whatsapp.com" target="_blank">
+          <div class="card">
+            <img src="./whatsapp.svg" alt="Acesso 4" width="100" height="100" />
+            <span>Acesso 3</span>
+          </div>
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <div class="card">
+            <img src="./facebook.png" alt="Acesso 4" width="100" height="100" />
+            <span>Acesso 4</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <span>
+      Hospital São Camilo Fortaleza ❤️ - 2023
+    </span>
+  </main>
+
+</body>
+
+</html>
